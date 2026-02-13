@@ -37,15 +37,29 @@
 
 
 
-let arr1 = [1,2, {name: "Jk"}];
-let arr2 = [...arr1];
+// let arr1 = [1,2, {name: "Jk"}];
+// let arr2 = [...arr1];
 
-console.log(arr2);
+// console.log(arr2);
 
-arr2[1] = 10;
-console.log(arr1);
-console.log(arr2);
+// arr2[1] = 10;
+// console.log(arr1);
+// console.log(arr2);
 
-arr2[2].name = "SK";
-console.log(arr1);
-console.log(arr2);
+// arr2[2].name = "SK";
+// console.log(arr1);
+// console.log(arr2);
+
+
+
+// Basic callback example (Syncronous)
+function greet(name) {
+    console.log("Hello " + name);
+}
+
+function processUserInput(callback) {
+    let name = "Saqib";
+    callback(name);
+}
+
+processUserInput(greet);
