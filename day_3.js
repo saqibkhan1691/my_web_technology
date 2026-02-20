@@ -63,3 +63,22 @@ function processUserInput(callback) {
 }
 
 processUserInput(greet);
+
+
+// Asynchronous callback example
+function greet(name) {
+    console.log("Hello " + name);
+}
+
+function processUserInput(callback) {
+    console.log("Processing user input...");
+    setTimeout(function() {
+        let name = "Saqib";
+        callback(name);
+    }, 2000);
+}
+
+
+// setTimeout() {
+//     console.log("This will be printed after 2 seconds");
+// }
